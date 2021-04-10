@@ -1,9 +1,13 @@
 const calculate = (calculationSteps) => {
     //push remaining to array
-    let equation = []
+    let calculation = []
     //run through array
     for (let i = 0; i < calculationSteps.length; i++) {
-        
+        //filter out extra
+        let equation = calculationSteps.filter(extra => {
+            return noNumber(extra)
+        })
+        return equation
     }
     
     //push remaining to array
@@ -14,8 +18,8 @@ const calculate = (calculationSteps) => {
 }
 
 //filter out extra
-const noNumber = (junk) => {
-    switch (junk) {
+const noNumber = (extra) => {
+    switch (extra) {
         case '':
         case 'foo':
         case 'bar':
