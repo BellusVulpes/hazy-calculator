@@ -3,14 +3,11 @@ const calculate = (calculationSteps) => {
     return noNumber(extra)
   })
 
-  // console.log(equation)
   for (let i = 0; i < equation.length; i++) {
     let one = parseInt(equation[i])
     let two = parseInt(equation[i = 2])
     let operand = equation[i = 1]
 
-    // console.log(one)
-    // console.log(two)
     switch (operand) {
       case operand = '*':
         let answerOne = one * two
